@@ -1,0 +1,18 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+<h1 class="masthead-heading mb-0">Listado de infraestructuras</h1>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'crear_infra' %}">Crear infraestructura</a>
+{% endblock %}
+
+{% block formulario %}
+    {% for infra in object_list %}
+        <li>
+            Nombre:{{infra.nombre}} 
+        </li>
+        <a class="btn btn-primary" href="{% url 'Detalle infra' infra.id%}">Ver detalles</a>
+        <a class="btn btn-primary" href="{% url 'Actualizar infra' infra.id%}">Editar infraestructura</a>
+        <a class="btn btn-primary" href="{% url 'Borrar infra' infra.id%}">Borrar infraestructura</a>
+    {% endfor %}
+{% endblock %}
+

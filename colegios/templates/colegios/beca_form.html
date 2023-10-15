@@ -1,0 +1,17 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+
+<h3 class="masthead-heading mb-0">Formulario para crear becas</h3>
+
+{% endblock %}
+
+{% block formulario %}
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Guardar">
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+<h1 class="masthead-heading mb-0">Listado de colegio</h1>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'crear_colegio' %}">Crear colegio</a>
+{% endblock %}
+
+{% block formulario %}
+    {% for colegio in object_list %}
+        <li>
+            Nombre:{{colegio.nombre}} 
+        </li>
+        <a class="btn btn-primary" href="{% url 'Detalle colegio' colegio.id%}">Ver detalles</a>
+        <a class="btn btn-primary" href="{% url 'Actualizar colegio' colegio.id%}">Editar colegio</a>
+        <a class="btn btn-primary" href="{% url 'Borrar colegio' colegio.id%}">Borrar colegio</a>
+    {% endfor %}
+{% endblock %}

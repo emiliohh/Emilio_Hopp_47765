@@ -1,0 +1,15 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+<h1 class="masthead-heading mb-0">Formulario para crear activdad</h1>
+
+{% endblock %}
+{% block formulario %}
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Guardar">
+</form>
+{% endblock %})

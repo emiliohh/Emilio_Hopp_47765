@@ -1,0 +1,14 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+<h3>Detalle de la actividad extra programática </h3>
+{% endblock %}
+
+{% block formulario %}
+
+    <p> Nombre: {{object.nombre}}  </p>
+    <p> Periodicidad: {{object.periodicidad}}  </p>
+    <p> Duración: {{object.duracion}}  </p>
+    <a class="btn btn-primary" href="{% url 'lista_becas' %}">Regresar</a>
+
+{% endblock %}

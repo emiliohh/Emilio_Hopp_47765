@@ -1,0 +1,17 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+<h3 class="masthead-heading mb-0">Lista de Becas</h3>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'crear_beca' %}">Crear beca</a>
+{% endblock %}
+
+{% block formulario %}
+    {% for beca in object_list %}
+        <li>
+            Nombre:{{beca.nombre}} 
+        </li>
+        <a class="btn btn-primary" href="{% url 'Detalle beca' beca.id%}">Ver detalles</a>
+        <a class="btn btn-primary" href="{% url 'Actualizar beca' beca.id%}">Editar beca</a>
+        <a class="btn btn-primary" href="{% url 'Borrar beca' beca.id%}">Borrar beca</a>
+    {% endfor %}
+{% endblock %}

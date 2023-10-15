@@ -1,0 +1,13 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+<h3>Detalle de la beca</h3>
+{% endblock %}
+
+{% block formulario %}
+
+    <p> Nombre: {{object.nombre}}  </p>
+    <p> Descripción: {{object.descripcion}}  </p>
+    <a class="btn btn-primary" href="{% url 'lista_becas' %}">Regresar</a>
+
+{% endblock %}

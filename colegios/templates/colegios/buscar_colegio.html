@@ -1,0 +1,12 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+<h3>Buscador de colegios</h3>
+{% endblock %}
+
+{% block formulario %}
+    <form action="/colegios/resu_colegio/" method="GET">
+        <p>Nombre: <input type="text" name="nombre"></p>
+        <button type="submit">Buscar</button>
+    </form>
+{% endblock %}

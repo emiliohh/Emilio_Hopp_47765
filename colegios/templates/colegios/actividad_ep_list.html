@@ -1,0 +1,17 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+<h3 class="masthead-heading mb-0">Lista de actividades extra programáticas</h3>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'crear_actividad' %}">Crear actividad extra programática</a>
+{% endblock %}
+
+{% block formulario %}
+    {% for actividad in object_list %}
+        <li>
+            Nombre:{{actividad.nombre}}
+        </li>
+        <a class="btn btn-primary" href="{% url 'Detalle actividad' actividad.id%}">Ver detalles</a>
+        <a class="btn btn-primary" href="{% url 'Actualizar actividad' actividad.id%}">Editar actividad</a>
+        <a class="btn btn-primary" href="{% url 'Borrar actividad' actividad.id%}">Borrar actividad</a>
+    {% endfor %}
+{% endblock %}

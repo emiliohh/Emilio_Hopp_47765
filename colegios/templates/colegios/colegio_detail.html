@@ -1,0 +1,13 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+<h3>Detalle del colegio</h3>
+{% endblock %}
+
+{% block formulario %}
+    <p> Nombre: {{object.nombre}}  </p>
+    <p> Dirección: {{object.direccion}}  </p>
+    <p> Email : {{object.email}}  </p>
+    <p> Dependencia: {{object.dependencia}}  </p>
+    <a class="btn btn-primary" href="{% url 'lista_colegios' %}">Regresar</a>
+{% endblock %}

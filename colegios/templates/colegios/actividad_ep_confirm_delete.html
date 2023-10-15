@@ -1,0 +1,11 @@
+{% extends "colegios/padre.html" %}
+{% block titulo %}
+<form action="#" method="POST"> {% csrf_token %}
+   <h3> ¿Estás seguro de borrar la actividad extra programática {{object.nombre}}?</h3>
+   <button type="submit">Borrar</button>
+</form>
+ {% endblock %}
+
+{% block formulario %}
+
+{% endblock %} 

@@ -1,0 +1,20 @@
+{% extends "colegios/padre.html" %}
+
+{% block titulo %}
+   <h3>Resultado de la busqueda de colegios</h3>
+{% endblock %}
+
+{% block formulario %}
+    {% if res %}
+        <h3>Los resultados son</h3>
+        <ol>
+            {% for colegio in res %}
+                <li>
+                    Nombre:{{colegio.nombre}} ---- Dirección: {{colegio.direccion}} ---- Email: {{colegio.email}} ---- Dependencia: {{colegio.dependencia}}
+                </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h3>No hay resultados que coincidan con la busqueda</h3>
+    {% endif %}
+{% endblock %}
