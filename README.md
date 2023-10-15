@@ -23,4 +23,4 @@ El proyecto está enfocado en poder a disposición de los padres información de
 https://docs.google.com/spreadsheets/d/1CPIjk4NiNsGRxvfax07yl0V6-FXbDpobnPgIms9xaIM/edit?usp=sharing
 
 # Video Demostración:
-
+https://drive.google.com/file/d/1oy2QCaQyV5f90Zz9rjPN7OlnsXf_9wR6/view?usp=sharing
